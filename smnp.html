@@ -467,6 +467,18 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_instalación">3.1.2. Instalación</a></li>
 </ul>
 </li>
+<li><a href="#_nagios_core">3.2. NAGIOS Core</a></li>
+<li><a href="#_acerca_de_la_herramienta_2">3.3. Acerca de la Herramienta</a>
+<ul class="sectlevel3">
+<li><a href="#_caracteristicas">3.3.1. <strong>Caracteristicas</strong></a></li>
+</ul>
+</li>
+<li><a href="#_funcionamiento">3.4. Funcionamiento</a>
+<ul class="sectlevel3">
+<li><a href="#_nagios_core_versión_web">3.4.1. NAGIOS CORE versión web</a></li>
+<li><a href="#_nagios_core_versión_windows">3.4.2. NAGIOS CORE versión Windows</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a href="#_bibliografia"><span class="icon"><i class="fa fa-book"></i></span> Bibliografia</a></li>
@@ -494,10 +506,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="ulist data-line-7">
 <ul>
 <li class="data-line-7">
-<p><span class="icon"><i class="fa fa-male"></i></span> <strong>Nombre</strong></p>
+<p><span class="icon"><i class="fa fa-male"></i></span> <strong>Luis Enrique Cabrera Oyuela</strong></p>
 </li>
 <li class="data-line-8">
-<p><span class="icon"><i class="fa fa-inbox"></i></span> correo</p>
+<p><span class="icon"><i class="fa fa-inbox"></i></span> <a href="mailto:coldblitz@unitec.edu">coldblitz@unitec.edu</a></p>
 </li>
 <li class="data-line-9">
 <p><span class="icon"><i class="fa fa-calendar"></i></span> 2020-09-1 20:00 CST</p>
@@ -660,36 +672,396 @@ Es de suma importancia estar al tanto de todos nuestros dispositivos de red. Con
 </div>
 </div>
 </div>
+<div class="sect2 data-line-1">
+<h3 id="_nagios_core">3.2. NAGIOS Core</h3>
+
+</div>
+<div class="sect2 data-line-3">
+<h3 id="_acerca_de_la_herramienta_2">3.3. Acerca de la Herramienta</h3>
+<div class="imageblock text-center data-line-4">
+<div class="content">
+<img src="images/nagios_1.PNG" alt="nagios 1">
 </div>
 </div>
-<h1 id="_bibliografia" class="sect0 data-line-28"><span class="icon"><i class="fa fa-book"></i></span> Bibliografia</h1>
-<div class="ulist data-line-30">
+<div class="paragraph data-line-6">
+<p>NAGIOS core es un software gratis open-source lanzado en 2002 el cual se enfoca en monitorear sistemas, redes, e infraestructura. Nagios ofrece monitoreo y servicios de alerta para servidores, switches, aplicaciones, y servicios. Nagios Core se especializa en tener bitácoras de dispositivos conectados en la red, proveer un sistema de alerta en caso de que una falla se presente, y proporcionar una manera gráfica y resumida al administrador de red.</p>
+</div>
+<div class="paragraph data-line-8">
+<p>Nagios Core fue creado apartir de C y en el día moderno tiene un repositorio de Github:</p>
+</div>
+<div class="paragraph data-line-10">
+<p><span class="red yellow-background big"><a href="https://github.com/NagiosEnterprises/nagioscore" class="bare">https://github.com/NagiosEnterprises/nagioscore</a></span></p>
+</div>
+<div class="sect3 data-line-12">
+<h4 id="_caracteristicas">3.3.1. <strong>Caracteristicas</strong></h4>
+<div class="ulist data-line-13">
 <ul>
-<li class="data-line-30">
-<p><span class="icon"><i class="fa fa-book"></i></span> <a href="https://asciidoctor.org/docs/user-manual/">Asciidoctor User Manual</a></p>
+<li class="data-line-13">
+<p><strong>Uso:</strong>
+Esta herramienta nos permite mostrar y monitorear dispositivos en la red:</p>
+<div class="ulist data-line-15">
+<ul>
+<li class="data-line-15">
+<p>PCs</p>
 </li>
+<li class="data-line-16">
+<p>Switches</p>
+</li>
+<li class="data-line-17">
+<p>Routers</p>
+</li>
+<li class="data-line-18">
+<p>Impresoras</p>
+</li>
+<li class="data-line-19">
+<p>etc&#8230;&#8203; (cualquier otro dispositivo con disponibilidad SNMP)</p>
+</li>
+</ul>
+</div>
+</li>
+<li class="data-line-20">
+<p><strong>Funcionalidades:</strong>
+Nagios Core ofrece diferentes funcionalidades al momento de querer monitorear una red:</p>
+<div class="ulist data-line-22">
+<ul>
+<li class="data-line-22">
+<p>Monitoreo Integeral</p>
+<div class="ulist data-line-23">
+<ul>
+<li class="data-line-23">
+<p>Capacidades para monitorear aplicaciones, servicios, sistemas operativos, protocolos de red, métricas de sistema y componentes de infraestructura con una herramienta única.</p>
+</li>
+</ul>
+</div>
+</li>
+<li class="data-line-24">
+<p>Visibilidad</p>
+<div class="ulist data-line-25">
+<ul>
+<li class="data-line-25">
+<p>Vista centralizada de todo la infraestructura de la red.</p>
+</li>
+<li class="data-line-26">
+<p>Detección rápida de apagones de red.</p>
+</li>
+<li class="data-line-27">
+<p>Alerta de dispositivo puede ser notificada via correo o mensaje de texto.</p>
+</li>
+</ul>
+</div>
+</li>
+<li class="data-line-28">
+<p>Remedio de Problemas</p>
+<div class="ulist data-line-29">
+<ul>
+<li class="data-line-29">
+<p>Los controladores de eventos permiten el reinicio automático de aplicaciones y servicios fallidos.</p>
+</li>
+</ul>
+</div>
+</li>
+<li class="data-line-30">
+<p>Arquitectura extendible</p>
+<div class="ulist data-line-31">
+<ul>
 <li class="data-line-31">
-<p><span class="icon"><i class="fa fa-book"></i></span> <a href="https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/">AsciiDoc Syntax Quick Reference</a></p>
+<p>Cientos de addons desarrollados por la comunidad que amplían la funcionalidad de NAGIOS.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
 </li>
 <li class="data-line-32">
-<p><span class="icon"><i class="fa fa-book"></i></span> <a href="https://leanpub.com/awesomeasciidoctornotebook/read">Awesome Asciidoctor Notebook</a></p>
+<p><strong>Arquitectura:</strong>
+La arquitectura de NAGIOS core esta construida apartir de un servidor/agente(s).</p>
+<div class="ulist data-line-34">
+<ul>
+<li class="data-line-34">
+<p>Usualmente en una red, un servidor NAGIOS esta corriendo en un host, y cualquier complemento instalado puede interactuar con hosts remotos o locales que ocupan ser monitoreados.</p>
+</li>
+<li class="data-line-35">
+<p>Los complementos instalados envían información al Scheduler, el cual lo muestra todo en un GUI.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="imageblock text-center data-line-37">
+<div class="content">
+<img src="images/nagios_18.png" alt="nagios 18">
+</div>
+</div>
+</div>
+</div>
+<div class="sect2 data-line-40">
+<h3 id="_funcionamiento">3.4. Funcionamiento</h3>
+<div class="paragraph data-line-41">
+<p>En esta sección se explorarán los diferentes usos de la versión en línea de NAGEOS CORE y la versión Windows.</p>
+</div>
+<div class="sect3 data-line-43">
+<h4 id="_nagios_core_versión_web">3.4.1. NAGIOS CORE versión web</h4>
+<div class="olist arabic data-line-45">
+<ol class="arabic">
+<li class="data-line-45">
+<p>Acceder la página principal de NAGIOS:</p>
+<div class="paragraph data-line-47">
+<p><span class="red yellow-background big"><a href="https://www.nagios.org/projects/nagios-core/" class="bare">https://www.nagios.org/projects/nagios-core/</a></span></p>
+</div>
+<div class="imageblock text-center data-line-49">
+<div class="content">
+<img src="images/nagios_2.png" alt="nagios 2">
+</div>
+</div>
+<div class="paragraph data-line-51">
+<p>Hacer clic en "Try an Online demo"</p>
+</div>
+</li>
+<li class="data-line-52">
+<p>Hacer clic en "Login to Nagios Core"&#8201;&#8212;&#8201;por motivos de explicación se utilizará el acceso de Administrador.</p>
+<div class="imageblock text-center data-line-54">
+<div class="content">
+<img src="images/nagios_3.png" alt="nagios 3">
+</div>
+</div>
+</li>
+<li class="data-line-55">
+<p>Ingresar las credenciales correctas:</p>
+<div class="ulist data-line-57">
+<ul>
+<li class="data-line-57">
+<p>Username: <span class="red yellow-background big">nagiosadmin</span></p>
+</li>
+<li class="data-line-59">
+<p>Password: <span class="red yellow-background big">nagiosadmin</span></p>
+<div class="paragraph data-line-61">
+<p>Hacer clic en "Sign in"</p>
+</div>
+<div class="imageblock text-center data-line-63">
+<div class="content">
+<img src="images/nagios_4.png" alt="nagios 4">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li class="data-line-65">
+<p>Hacer clic en "Hosts"</p>
+<div class="imageblock text-center data-line-67">
+<div class="content">
+<img src="images/nagios_5.png" alt="nagios 5">
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="sect4 data-line-69">
+<h5 id="_pruebas_en_nageos_versión_en_línea">3.4.1.1. Pruebas en NAGEOS versión en línea</h5>
+<div class="olist arabic data-line-70">
+<ol class="arabic">
+<li class="data-line-70">
+<p>Hacer clic en cualquier host.</p>
+<div class="imageblock text-center data-line-72">
+<div class="content">
+<img src="images/nagios_6.png" alt="nagios 6">
+</div>
+</div>
+</li>
+<li class="data-line-73">
+<p>Analizar la información presentada.</p>
+<div class="imageblock text-center data-line-75">
+<div class="content">
+<img src="images/nagios_8.png" alt="nagios 8">
+</div>
+</div>
+<div class="imageblock text-center data-line-77">
+<div class="content">
+<img src="images/nagios_7.png" alt="nagios 7">
+</div>
+</div>
+<div class="paragraph data-line-79">
+<p>En este host elegido podemos notar varios elementos:</p>
+</div>
+<div class="ulist data-line-81">
+<ul>
+<li class="data-line-81">
+<p>Nombre de host: <span class="red yellow-background big">Log-Server.nagios.local</span></p>
+</li>
+<li class="data-line-82">
+<p>Estado del host: <span class="red yellow-background big">UP</span></p>
+</li>
+<li class="data-line-83">
+<p>Ultima actualización: <span class="red yellow-background big">09-18-2020 15:21:42  ( 0d 0h 0m 6s ago)</span></p>
+</li>
+<li class="data-line-84">
+<p>&#8230;&#8203; entre otros.</p>
+<div class="paragraph data-line-86">
+<p>En la parte derecha de la pantalla se puede notar la variedad de comandos que el Administrador de Red puede realizar tales como:</p>
+</div>
+</li>
+<li class="data-line-88">
+<p>Buscar el host en el mapa.</p>
+</li>
+<li class="data-line-89">
+<p>Programar tiempo de inactividad para el host.</p>
+</li>
+<li class="data-line-90">
+<p>Activar o desactivar alertas o notificaciones del host.</p>
+</li>
+<li class="data-line-91">
+<p>&#8230;&#8203; entre otros.</p>
+</li>
+</ul>
+</div>
+</li>
+<li class="data-line-93">
+<p>Programar tiempo de inactividad.</p>
+<div class="imageblock text-center data-line-95">
+<div class="content">
+<img src="images/nagios_9.png" alt="nagios 9">
+</div>
+</div>
+</li>
+<li class="data-line-97">
+<p>Ingresar la información a seguir:</p>
+<div class="imageblock text-center data-line-99">
+<div class="content">
+<img src="images/nagios_10.png" alt="nagios 10">
+</div>
+</div>
+<div class="paragraph data-line-101">
+<p>Pop up que muestra el éxito de la operación:</p>
+</div>
+<div class="imageblock text-center data-line-103">
+<div class="content">
+<img src="images/nagios_11.png" alt="nagios 11">
+</div>
+</div>
+<div class="paragraph data-line-105">
+<p>Confirmar el tiempo de inactividad:</p>
+</div>
+<div class="imageblock text-center data-line-107">
+<div class="content">
+<img src="images/nagios_12.png" alt="nagios 12">
+</div>
+</div>
+</li>
+<li class="data-line-109">
+<p>Revisar información de dispositivo:</p>
+<div class="imageblock text-center data-line-111">
+<div class="content">
+<img src="images/nagios_13.png" alt="nagios 13">
+</div>
+</div>
+</li>
+<li class="data-line-113">
+<p>Revisar uso de disco.</p>
+<div class="imageblock text-center data-line-115">
+<div class="content">
+<img src="images/nagios_14.png" alt="nagios 14">
+</div>
+</div>
+<div class="paragraph data-line-117">
+<p>Uso de datos en disco:</p>
+</div>
+<div class="imageblock text-center data-line-119">
+<div class="content">
+<img src="images/nagios_15.png" alt="nagios 15">
+</div>
+</div>
+<div class="paragraph data-line-121">
+<p>Uso de datos en Youtube</p>
+</div>
+<div class="imageblock text-center data-line-123">
+<div class="content">
+<img src="images/nagios_16.png" alt="nagios 16">
+</div>
+</div>
+<div class="paragraph data-line-125">
+<p>Mas información sobre el uso de datos en Youtube</p>
+</div>
+<div class="imageblock text-center data-line-127">
+<div class="content">
+<img src="images/nagios_17.png" alt="nagios 17">
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect3 data-line-130">
+<h4 id="_nagios_core_versión_windows">3.4.2. NAGIOS CORE versión Windows</h4>
+<div class="olist arabic data-line-133">
+<ol class="arabic">
+<li class="data-line-133">
+<p>Acceder la página principal de NAGIOS:</p>
+<div class="paragraph data-line-135">
+<p><span class="red yellow-background big"><a href="https://www.nagios.org/projects/nagios-core/" class="bare">https://www.nagios.org/projects/nagios-core/</a></span></p>
+</div>
+<div class="imageblock text-center data-line-137">
+<div class="content">
+<img src="images/nagios_2.png" alt="nagios 2">
+</div>
+</div>
+<div class="paragraph data-line-139">
+<p>Hacer clic en "Donwload for Free" y elejir Nagios XI para descarga. Elejir versión Windows.</p>
+</div>
+</li>
+<li class="data-line-141">
+<p>Crear cuenta para bajar Nagios.</p>
+</li>
+<li class="data-line-142">
+<p>Hacer clic en "Download now" .ova</p>
+<div class="imageblock text-center data-line-144">
+<div class="content">
+<img src="images/nagios_20.png" alt="nagios 20">
+</div>
+</div>
+<div class="paragraph data-line-146">
+<p>Esperar la descarga&#8230;&#8203;</p>
+</div>
+<div class="paragraph data-line-148">
+<p>4.</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<h1 id="_bibliografia" class="sect0 data-line-29"><span class="icon"><i class="fa fa-book"></i></span> Bibliografia</h1>
+<div class="ulist data-line-31">
+<ul>
+<li class="data-line-31">
+<p><span class="icon"><i class="fa fa-book"></i></span> <a href="https://asciidoctor.org/docs/user-manual/">Asciidoctor User Manual</a></p>
+</li>
+<li class="data-line-32">
+<p><span class="icon"><i class="fa fa-book"></i></span> <a href="https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/">AsciiDoc Syntax Quick Reference</a></p>
 </li>
 <li class="data-line-33">
-<p><span class="icon"><i class="fa fa-book"></i></span> <a href="https://jorge-aguilera.gitlab.io/tutoasciidoc/">Tutorial superbasico AsciiDoctor</a></p>
+<p><span class="icon"><i class="fa fa-book"></i></span> <a href="https://leanpub.com/awesomeasciidoctornotebook/read">Awesome Asciidoctor Notebook</a></p>
 </li>
 <li class="data-line-34">
+<p><span class="icon"><i class="fa fa-book"></i></span> <a href="https://jorge-aguilera.gitlab.io/tutoasciidoc/">Tutorial superbasico AsciiDoctor</a></p>
+</li>
+<li class="data-line-35">
 <p><span class="icon"><i class="fa fa-plug"></i></span> <a href="https://marketplace.visualstudio.com/items?itemName=asciidoctor.asciidoctor-vscode">AsciiDoc support for Visual Studio Code</a></p>
 </li>
 </ul>
 </div>
 <hr>
-<div class="paragraph text-center data-line-39">
+<div class="paragraph text-center data-line-40">
 <p><strong>HECHO</strong> CON <span class="icon"><i class="fa fa-heart fa-1x"></i></span> POR <strong>estudiantes de UNITEC</strong></p>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-09-18 09:50:17 -0600
+Last updated 2020-09-18 15:24:43 -0600
 </div>
 </div>
 </body>
