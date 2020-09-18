@@ -464,7 +464,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_prtg">3.1. PRTG</a>
 <ul class="sectlevel3">
 <li><a href="#_acerca_de_la_herramienta">3.1.1. Acerca de la Herramienta</a></li>
-<li><a href="#_instalación">3.1.2. Instalación</a></li>
+<li><a href="#_por_qué_utilizamos_esta_herramienta">3.1.2. ¿Por qué utilizamos esta herramienta?</a></li>
+<li><a href="#_instalación">3.1.3. Instalación</a></li>
+<li><a href="#_filtro_de_agente_al_administrador">3.1.4. Filtro de Agente al Administrador</a></li>
+<li><a href="#_configurar_agente">3.1.5. Configurar Agente</a></li>
 </ul>
 </li>
 <li><a href="#_nagios_core">3.2. NAGIOS Core</a></li>
@@ -477,6 +480,14 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel3">
 <li><a href="#_nagios_core_versión_web">3.4.1. NAGIOS CORE versión web</a></li>
 <li><a href="#_nagios_core_versión_windows_virtualbox">3.4.2. NAGIOS CORE versión Windows (VirtualBox)</a></li>
+</ul>
+</li>
+<li><a href="#_cacti">3.5. <strong>Cacti</strong></a>
+<ul class="sectlevel3">
+<li><a href="#_caracteristicas_2">3.5.1. <strong>Caracteristicas</strong></a></li>
+<li><a href="#_preparativos_instalacion_de_dependencias">3.5.2. <strong>Preparativos: Instalacion de dependencias</strong></a></li>
+<li><a href="#_instalar_cacti">3.5.3. <strong>Instalar Cacti</strong></a></li>
+<li><a href="#_setup_cacti">3.5.4. Setup Cacti</a></li>
 </ul>
 </li>
 </ul>
@@ -495,10 +506,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p><span class="icon"><i class="fa fa-female"></i></span> <strong>Crysthel Aparicio Bonilla</strong></p>
 </li>
 <li class="data-line-2">
-<p><span class="icon"><i class="fa fa-inbox"></i></span> <a href="mailto:apariciocrysthel@gmail.com">apariciocrysthel@gmail.com</a></p>
+<p><span class="icon"><i class="fa fa-inbox"></i></span> <a href="mailto:crysthel.aparicio@unitec.edu">crysthel.aparicio@unitec.edu</a></p>
 </li>
 <li class="data-line-3">
-<p><span class="icon"><i class="fa fa-calendar"></i></span> 2020-09-1 20:00 CST</p>
+<p><span class="icon"><i class="fa fa-calendar"></i></span> 2020-18-1 20:00 CST</p>
 </li>
 </ul>
 </div>
@@ -512,7 +523,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p><span class="icon"><i class="fa fa-inbox"></i></span> <a href="mailto:coldblitz@unitec.edu">coldblitz@unitec.edu</a></p>
 </li>
 <li class="data-line-9">
-<p><span class="icon"><i class="fa fa-calendar"></i></span> 2020-09-1 20:00 CST</p>
+<p><span class="icon"><i class="fa fa-calendar"></i></span> 2020-18-1 20:00 CST</p>
 </li>
 </ul>
 </div>
@@ -520,13 +531,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="ulist data-line-13">
 <ul>
 <li class="data-line-13">
-<p><span class="icon"><i class="fa fa-male"></i></span> <strong>Nombre</strong></p>
+<p><span class="icon"><i class="fa fa-male"></i></span> <strong>Carlos Casco Valle</strong></p>
 </li>
 <li class="data-line-14">
-<p><span class="icon"><i class="fa fa-inbox"></i></span> correo</p>
+<p><span class="icon"><i class="fa fa-inbox"></i></span> <a href="mailto:cgcascovalle@unitec.edu">cgcascovalle@unitec.edu</a></p>
 </li>
 <li class="data-line-15">
-<p><span class="icon"><i class="fa fa-calendar"></i></span> 2020-09-1 20:00 CST</p>
+<p><span class="icon"><i class="fa fa-calendar"></i></span> 2020-18-1 20:00 CST</p>
 </li>
 </ul>
 </div>
@@ -534,13 +545,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="ulist data-line-19">
 <ul>
 <li class="data-line-19">
-<p><span class="icon"><i class="fa fa-male"></i></span> <strong>Nombre</strong></p>
+<p><span class="icon"><i class="fa fa-male"></i></span> <strong>André Velásquez</strong></p>
 </li>
 <li class="data-line-20">
-<p><span class="icon"><i class="fa fa-inbox"></i></span> correo</p>
+<p><span class="icon"><i class="fa fa-inbox"></i></span> <a href="mailto:avela@unitec.edu">avela@unitec.edu</a></p>
 </li>
 <li class="data-line-21">
-<p><span class="icon"><i class="fa fa-calendar"></i></span> 2020-09-1 20:00 CST</p>
+<p><span class="icon"><i class="fa fa-calendar"></i></span> 2020-18-1 20:00 CST</p>
 </li>
 </ul>
 </div>
@@ -548,13 +559,27 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="ulist data-line-25">
 <ul>
 <li class="data-line-25">
-<p><span class="icon"><i class="fa fa-male"></i></span> <strong>Nombre</strong></p>
+<p><span class="icon"><i class="fa fa-male"></i></span> <strong>Oswal Fuentes</strong></p>
 </li>
 <li class="data-line-26">
-<p><span class="icon"><i class="fa fa-inbox"></i></span> correo</p>
+<p><span class="icon"><i class="fa fa-inbox"></i></span> <a href="mailto:oswal_f@unitec.edu">oswal_f@unitec.edu</a></p>
 </li>
 <li class="data-line-27">
-<p><span class="icon"><i class="fa fa-calendar"></i></span> 2020-09-1 20:00 CST</p>
+<p><span class="icon"><i class="fa fa-calendar"></i></span> 2020-18-1 20:00 CST</p>
+</li>
+</ul>
+</div>
+<hr>
+<div class="ulist data-line-31">
+<ul>
+<li class="data-line-31">
+<p><span class="icon"><i class="fa fa-male"></i></span> <strong>Mario Sánchez</strong></p>
+</li>
+<li class="data-line-32">
+<p><span class="icon"><i class="fa fa-inbox"></i></span> <a href="mailto:maslz980@unitec.edu">maslz980@unitec.edu</a></p>
+</li>
+<li class="data-line-33">
+<p><span class="icon"><i class="fa fa-calendar"></i></span> 2020-18-1 20:00 CST</p>
 </li>
 </ul>
 </div>
@@ -650,26 +675,258 @@ Es de suma importancia estar al tanto de todos nuestros dispositivos de red. Con
 <div class="sectionbody">
 <div class="sect2 data-line-1">
 <h3 id="_prtg">3.1. PRTG</h3>
-<div class="sect3 data-line-3">
-<h4 id="_acerca_de_la_herramienta">3.1.1. Acerca de la Herramienta</h4>
-<div class="paragraph data-line-4">
-<p>texto&#8230;&#8203;</p>
-</div>
-</div>
-<div class="sect3 data-line-6">
-<h4 id="_instalación">3.1.2. Instalación</h4>
-<div class="olist arabic data-line-8">
-<ol class="arabic">
-<li class="data-line-8">
-<p>Ir al url: <strong><a href="https://www.es.paessler.com/download/prtg-download?download=1" class="bare">https://www.es.paessler.com/download/prtg-download?download=1</a></strong></p>
-<div class="imageblock text-center data-line-10">
+<div class="imageblock text-center data-line-2">
 <div class="content">
-<img src="images/rptgD.PNG" alt="rptgD">
+<img src="images/prtg_3.PNG" alt="prtg 3">
+</div>
+</div>
+<div class="sect3 data-line-4">
+<h4 id="_acerca_de_la_herramienta">3.1.1. Acerca de la Herramienta</h4>
+<div class="paragraph data-line-5">
+<p>Aquellos administradores de sistemas que trabajan en grandes entornos de TI, con miles de dispositivos y sistemas en múltiples ubicaciones,
+necesitan una forma fácil de obtener la visibilidad y el control de unas infraestructuras cada vez más complejas.</p>
+</div>
+<div class="paragraph data-line-8">
+<p>PRTG Network Monitor simplifica la supervisión al tiempo que garantiza el rendimiento, la claridad y la facilidad de uso.</p>
+</div>
+</div>
+<div class="sect3 data-line-10">
+<h4 id="_por_qué_utilizamos_esta_herramienta">3.1.2. ¿Por qué utilizamos esta herramienta?</h4>
+<div class="paragraph data-line-12">
+<p>Primero que nada vamos a definir qué son los Traps SNMP:
+Por lo general los dispositivos como routers, arreglos, switch, servidores de aplicaciones, etc… contienen agente SNMP que la función principal es enviar alarmas (traps) cuando ocurren ciertos eventos como las siguientes:
+* Almacenamiento insuficiente en disco
+* Se cae una interfaz
+* Se daña un disco “broken”
+* La carga de procesador es alta
+* Falla una fuente de poder, etc.</p>
+</div>
+<div class="quoteblock data-line-21">
+<blockquote>
+<div class="paragraph data-line-22">
+<p>Entonces podemos decir que los traps son mensajes no solicitados que alertan al administrador de SNMP sobre una condición o un evento en la red.</p>
+</div>
+</blockquote>
+</div>
+</div>
+<div class="sect3 data-line-26">
+<h4 id="_instalación">3.1.3. Instalación</h4>
+<div class="olist arabic data-line-28">
+<ol class="arabic">
+<li class="data-line-28">
+<p>Ir al url: <strong><a href="https://www.es.paessler.com/download/prtg-download?download=1" class="bare">https://www.es.paessler.com/download/prtg-download?download=1</a></strong></p>
+<div class="imageblock text-center data-line-30">
+<div class="content">
+<img src="images/prtg_1.PNG" alt="prtg 1">
+</div>
+</div>
+</li>
+<li class="data-line-32">
+<p>Esperando Inicialización</p>
+<div class="imageblock text-center data-line-34">
+<div class="content">
+<img src="images/prtg_2.PNG" alt="prtg 2">
+</div>
+</div>
+</li>
+<li class="data-line-36">
+<p>Iniciar sesion con las credenciales por defecto <code>prgtadmin para user y password</code></p>
+<div class="imageblock text-center data-line-38">
+<div class="content">
+<img src="images/prtg_4.PNG" alt="prtg 4">
 </div>
 </div>
 </li>
 </ol>
 </div>
+<div class="paragraph data-line-41">
+<p>Requisitos mínimos para completar este tutorial:</p>
+</div>
+<div class="ulist data-line-43">
+<ul>
+<li class="data-line-43">
+<p>RPTG (Nuestro administrador SNMP)</p>
+</li>
+<li class="data-line-45">
+<p>SnmpTrapGen (Agente SNMP que enviará los eventos (traps))</p>
+<div class="olist arabic data-line-47">
+<ol class="arabic">
+<li class="data-line-47">
+<p>Vamos a configurar un dispositivo con su nombre: <mark>Trap SNMP</mark>.</p>
+</li>
+</ol>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph data-line-50">
+<p>Configurar <strong>Ip: 127.0.0.1</strong></p>
+</div>
+<div class="quoteblock data-line-52">
+<blockquote>
+<div class="paragraph data-line-1">
+<p>context: “disk broken” <em>es nuestro evento en nuestra red que deberá ser detectado por los el administrador de SNMP</em>
+Los siguientes campos quedan como default.</p>
+</div>
+</blockquote>
+</div>
+<div class="imageblock text-center data-line-55">
+<div class="content">
+<img src="images/prtg_5.PNG" alt="prtg 5">
+</div>
+</div>
+<div class="imageblock text-center data-line-57">
+<div class="content">
+<img src="images/prtg_6.PNG" alt="prtg 6">
+</div>
+</div>
+<div class="olist arabic data-line-59">
+<ol class="arabic">
+<li class="data-line-59">
+<p>Vamos a agregar un sensor para que sea el administrador de SNMP.</p>
+<div class="imageblock text-center data-line-61">
+<div class="content">
+<img src="images/prtg_7.PNG" alt="prtg 7">
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph data-line-63">
+<p>Lo buscamos como <mark>trap</mark></p>
+</div>
+<div class="imageblock text-center data-line-65">
+<div class="content">
+<img src="images/prtg_8.PNG" alt="prtg 8">
+</div>
+</div>
+<div class="olist arabic data-line-67">
+<ol class="arabic">
+<li class="data-line-67">
+<p>Dejamos sus campos por default</p>
+<div class="imageblock text-center data-line-69">
+<div class="content">
+<img src="images/prtg_9.PNG" alt="prtg 9">
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph data-line-71">
+<p>Su puerto <strong>162</strong> y ahi tiene su Base de Datos donde se guardan los eventos en la red.</p>
+</div>
+<div class="imageblock text-center data-line-73">
+<div class="content">
+<img src="images/prtg_10.PNG" alt="prtg 10">
+</div>
+</div>
+<div class="olist arabic data-line-75">
+<ol class="arabic">
+<li class="data-line-75">
+<p>Sensor creado existosamente y aqui podrá escuchar las alertas que van llegando</p>
+<div class="imageblock text-center data-line-77">
+<div class="content">
+<img src="images/prtg_11.PNG" alt="prtg 11">
+</div>
+</div>
+</li>
+<li class="data-line-79">
+<p>Presionamos en escanear ahora</p>
+<div class="imageblock text-center data-line-81">
+<div class="content">
+<img src="images/prtg_12.PNG" alt="prtg 12">
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3 data-line-84">
+<h4 id="_filtro_de_agente_al_administrador">3.1.4. Filtro de Agente al Administrador</h4>
+<div class="olist arabic data-line-86">
+<ol class="arabic">
+<li class="data-line-86">
+<p>Dentro del filtro nos vamos a configuración</p>
+<div class="imageblock text-center data-line-88">
+<div class="content">
+<img src="images/prtg_13.PNG" alt="prtg 13">
+</div>
+</div>
+</li>
+<li class="data-line-90">
+<p>Configuración del filtro con su llave <strong>bindings[text]</strong> que evaluará los datos</p>
+<div class="imageblock text-center data-line-92">
+<div class="content">
+<img src="images/prtg_14.PNG" alt="prtg 14">
+</div>
+</div>
+</li>
+<li class="data-line-94">
+<p>Agregamos el filtro: <strong>bindings["disk broken"]</strong></p>
+<div class="imageblock text-center data-line-96">
+<div class="content">
+<img src="images/prtg_15.PNG" alt="prtg 15">
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph data-line-98">
+<p><em>Al hacer match se va a alertar nuestro sensor, si esta recibiendo un fallo en algun disco del sistema, ya sea un arreglo o un servidor</em></p>
+</div>
+</div>
+<div class="sect3 data-line-100">
+<h4 id="_configurar_agente">3.1.5. Configurar Agente</h4>
+<div class="paragraph data-line-102">
+<p>En el se enviaran los traps hacia nuestro servidor.</p>
+</div>
+<div class="olist arabic data-line-104">
+<ol class="arabic">
+<li class="data-line-104">
+<p>Ir al url: <strong><a href="https://ezfive.com/snmpsoft-tools/" class="bare">https://ezfive.com/snmpsoft-tools/</a></strong>
+Y descargar el siguiente:</p>
+<div class="imageblock text-center data-line-107">
+<div class="content">
+<img src="images/prtg_16.PNG" alt="prtg 16">
+</div>
+</div>
+</li>
+<li class="data-line-109">
+<p>Vamos a la consola a enviar los traps a RPTG, copiemos el siguiente comando 3 veces:</p>
+</li>
+</ol>
+</div>
+<div class="listingblock data-line-112">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash"># SnmpTrapGen.exe -r:127.0.0.1 -v:3 -to:.1.3.6.1.2.1.1.4.0 -cn:"disk broken"</code></pre>
+</div>
+</div>
+<div class="imageblock text-center data-line-116">
+<div class="content">
+<img src="images/prtg_17.PNG" alt="prtg 17">
+</div>
+</div>
+<div class="olist arabic data-line-119">
+<ol class="arabic">
+<li class="data-line-119">
+<p>Ve a RPTG y Escanea para recibir la alerta</p>
+<div class="imageblock text-center data-line-121">
+<div class="content">
+<img src="images/prtg_18.PNG" alt="prtg 18">
+</div>
+</div>
+</li>
+<li class="data-line-123">
+<p>Alertas en TRAP</p>
+<div class="imageblock text-center data-line-125">
+<div class="content">
+<img src="images/prtg_19.PNG" alt="prtg 19">
+</div>
+</div>
+</li>
+</ol>
+</div>
+<hr>
 </div>
 </div>
 <div class="sect2 data-line-1">
@@ -1207,36 +1464,444 @@ La arquitectura de NAGIOS core esta construida apartir de un servidor/agente(s).
 </div>
 </div>
 </div>
+<div class="sect2 data-line-3">
+<h3 id="_cacti">3.5. <strong>Cacti</strong></h3>
+<div class="paragraph data-line-5">
+<p>Cacti es una solucion grafica para el monitoreo de dispositvos de red. Se apoya de tecnologias como RRDtool, apache y PHP. Esta aplicacion ofrece multiples metodos de recopilacion de datos.</p>
 </div>
+<div class="paragraph data-line-7">
+<p>Su interfaz grafica no es complicada de utilizar. Se utiliza comunmente para instalaciones sencillas de redes LAN, pero puede escalar a disenos LAN mas complejos.</p>
 </div>
-<h1 id="_bibliografia" class="sect0 data-line-29"><span class="icon"><i class="fa fa-book"></i></span> Bibliografia</h1>
-<div class="ulist data-line-31">
+<div class="sect3 data-line-9">
+<h4 id="_caracteristicas_2">3.5.1. <strong>Caracteristicas</strong></h4>
+<div class="ulist data-line-10">
 <ul>
-<li class="data-line-31">
+<li class="data-line-10">
+<p><strong>Uso:</strong>
+Esta herramienta nos permite mostrar de forma grafica los datos almacenados en la RRD:</p>
+<div class="ulist data-line-12">
+<ul>
+<li class="data-line-12">
+<p>uso del internet</p>
+</li>
+<li class="data-line-13">
+<p>temperatura del dispositivo</p>
+</li>
+<li class="data-line-14">
+<p>velocidad</p>
+</li>
+<li class="data-line-15">
+<p>voltaje</p>
+</li>
+<li class="data-line-16">
+<p>estado del cpu del dispositivo</p>
+</li>
+</ul>
+</div>
+</li>
+<li class="data-line-17">
+<p><strong>Tipos de datos</strong></p>
+</li>
+<li class="data-line-18">
+<p><strong>Graficos</strong>
+Se pueden generar graficos RRDtool por medio de fuentes de datos. Cacti nos permite crear casi cualquier grafica, teniendo como rubrica los estandares de graficos RRDtool.
+Estos graficos se pueden mostrar de varias formas:</p>
+<div class="ulist data-line-21">
+<ul>
+<li class="data-line-21">
+<p>Lista de Vistas</p>
+</li>
+<li class="data-line-22">
+<p>Vista Preliminar</p>
+</li>
+<li class="data-line-23">
+<p>Vista en Arbol</p>
+</li>
+</ul>
+</div>
+</li>
+<li class="data-line-25">
+<p><strong>Plantillas</strong>
+Gracias a la utilizacion de PHP y RRDtool, Cacti puede crecer a un gran numero de graficos y fuentes de datos, y los asocia en una plantilla.</p>
+</li>
+<li class="data-line-28">
+<p><strong>Manejo de Usuarios</strong>
+Cacti cuenta con la opcion de poder tener multiples usuarios. Se puede crear y agregar un usuario y darle permisos especificos de ciertas areas de Cacti.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3 data-line-31">
+<h4 id="_preparativos_instalacion_de_dependencias">3.5.2. <strong>Preparativos: Instalacion de dependencias</strong></h4>
+<div class="paragraph data-line-33">
+<p>En esta ocasion, el sistema operativo a utilizar es Lubuntu. Se opto por ella ya que consume muy pocos recursos, y luego esta se integrara como componente a GNS3 (como maquina virtual). Cabe mencionar que el software para maquinas virtuales que utilizaremos es VMWare Workstation Pro.</p>
+</div>
+<div class="paragraph data-line-35">
+<p><strong>Instalacion de Apache y MariaDB</strong></p>
+</div>
+<div class="listingblock data-line-38">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">sudo apt install -y apache2 mariadb-server mariadb-client php-mysql libapache2-mod-php</code></pre>
+</div>
+</div>
+<div class="paragraph data-line-42">
+<p><strong>Instalacion de extensiones de PHP</strong></p>
+</div>
+<div class="listingblock data-line-45">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">sudo apt install -y php-xml php-ldap php-mbstring php-gd php-gmp</code></pre>
+</div>
+</div>
+<div class="paragraph data-line-49">
+<p><strong>SNMP y RRDtool</strong></p>
+</div>
+<div class="listingblock data-line-52">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">sudo apt install -y snmp php-snmp rrdtool librrds-perl</code></pre>
+</div>
+</div>
+<div class="paragraph data-line-56">
+<p><strong>Modificaciones a configuracion de MySQL</strong></p>
+</div>
+<div class="paragraph data-line-58">
+<p>Abrimos el siguiente archivo en</p>
+</div>
+<div class="listingblock data-line-60">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">sudo nano /etc/mysql/mariadb.conf.d/50-server.cnf</code></pre>
+</div>
+</div>
+<div class="paragraph data-line-64">
+<p>Luego agregaremos las siguientes lineas debajo del tag [mysqld]</p>
+</div>
+<div class="listingblock data-line-66">
+<div class="content">
+<pre class="highlight"><code class="language-txt" data-lang="txt">collation-server = utf8mb4_unicode_ci
+max_heap_table_size = 128M
+tmp_table_size = 64M
+join_buffer_size = 64M
+innodb_file_format = Barracuda
+innodb_large_prefix = 1
+innodb_buffer_pool_size = 512M
+innodb_flush_log_at_timeout = 3
+innodb_read_io_threads = 32
+innodb_write_io_threads = 16
+innodb_io_capacity = 5000
+innodb_io_capacity_max = 10000</code></pre>
+</div>
+</div>
+<div class="paragraph data-line-81">
+<p><strong>Setear el Timezone</strong></p>
+</div>
+<div class="paragraph data-line-84">
+<p>Agregamos lo siguiente a los archivos  <strong>/etc/php/&lt;num_version&gt;/apache2/php.ini</strong> y sudo nano <strong>/etc/php/&lt;num_version&gt;/cli/php.ini</strong>.</p>
+</div>
+<div class="listingblock data-line-87">
+<div class="content">
+<pre class="highlight"><code class="language-txt" data-lang="txt">date.timezone = Americas/Tegucigalpa
+memory_limit = 512M
+max_execution_time = 60</code></pre>
+</div>
+</div>
+<div class="paragraph data-line-93">
+<p>y ahora reiniciamos nuestra base de datos.</p>
+</div>
+<div class="listingblock data-line-97">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">sudo systemctl restart mysql</code></pre>
+</div>
+</div>
+<div class="paragraph data-line-101">
+<p><strong>Creacion de base de datos para Cacti</strong></p>
+</div>
+<div class="paragraph data-line-104">
+<p>Ingresamos los siguientes comandos en consola:</p>
+</div>
+<div class="listingblock data-line-106">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">sudo mysql -u root -p
+create database cacti;
+GRANT ALL ON cacti.* TO cactiuser@localhost IDENTIFIED BY 'cactipassword';
+flush privileges;
+exit</code></pre>
+</div>
+</div>
+<div class="paragraph data-line-114">
+<p>Ahora toca importar mysql_test_data_timezone.sql a nuestra base de datos, y agregar permisos al usuario que acabamos de crear.</p>
+</div>
+<div class="listingblock data-line-116">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">sudo mysql -u root -p mysql &lt; /usr/share/mysql/mysql_test_data_timezone.sql
+sudo mysql -u root -p
+GRANT SELECT ON mysql.time_zone_name TO cactiuser@localhost;
+flush privileges;
+exit</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3 data-line-123">
+<h4 id="_instalar_cacti">3.5.3. <strong>Instalar Cacti</strong></h4>
+<div class="paragraph data-line-126">
+<p>Descargamos la version mas reciente de Cacti, descomprimos el archivo, y lo movemos al directorio <strong>/opt</strong>. Luego importamos la base de datos por defecto a nuestra base de datos.</p>
+</div>
+<div class="listingblock data-line-128">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">wget https://www.cacti.net/downloads/cacti-latest.tar.gz
+tar -zxvf cacti-latest.tar.gz
+sudo mv cacti-1* /opt/cacti
+sudo mysql -u root -p cacti &lt; /opt/cacti/cacti.sql</code></pre>
+</div>
+</div>
+<div class="paragraph data-line-135">
+<p>Ahora debemos editar el archivo de configuracion de cacti.</p>
+</div>
+<div class="listingblock data-line-137">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">sudo nano /opt/cacti/include/config.php</code></pre>
+</div>
+</div>
+<div class="paragraph data-line-140">
+<p>Debemos asegurar que los valores mostrados aqui sean los mismos en el archivo:</p>
+</div>
+<div class="listingblock data-line-142">
+<div class="content">
+<pre class="highlight"><code class="language-txt" data-lang="txt">$database_type = "mysql";
+$database_default = "cacti";
+$database_hostname = "localhost";
+$database_username = "cactiuser";
+$database_password = "cactipassword";
+$database_port = "3306";
+$database_ssl = false;</code></pre>
+</div>
+</div>
+<div class="paragraph data-line-152">
+<p>Ahora editamos el archivo crontab. En caso de que no exista, el comando se encargara de crearlo.</p>
+</div>
+<div class="listingblock data-line-154">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">sudo nano /etc/cron.d/cacti</code></pre>
+</div>
+</div>
+<div class="paragraph data-line-157">
+<p>Agregamos lo siguiente</p>
+</div>
+<div class="listingblock data-line-159">
+<div class="content">
+<pre class="highlight"><code class="language-txt" data-lang="txt">*/5 * * * * www-data php /opt/cacti/poller.php &gt; /dev/null 2&gt;&amp;1</code></pre>
+</div>
+</div>
+<div class="paragraph data-line-163">
+<p>Ahora editamos el archivo de configuracion de apache para poder hacer instalacion remota:</p>
+</div>
+<div class="listingblock data-line-165">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">sudo nano /etc/apache2/sites-available/cacti.conf</code></pre>
+</div>
+</div>
+<div class="paragraph data-line-168">
+<p>Agregamos lo siguiente:</p>
+</div>
+<div class="listingblock data-line-170">
+<div class="content">
+<pre class="highlight"><code class="language-txt" data-lang="txt">Alias /cacti /opt/cacti
+
+  &lt;Directory /opt/cacti&gt;
+      Options +FollowSymLinks
+      AllowOverride None
+      &lt;IfVersion &gt;= 2.3&gt;
+      Require all granted
+      &lt;/IfVersion&gt;
+      &lt;IfVersion &lt; 2.3&gt;
+      Order Allow,Deny
+      Allow from all
+      &lt;/IfVersion&gt;
+
+   AddType application/x-httpd-php .php
+
+&lt;IfModule mod_php.c&gt;
+      php_flag magic_quotes_gpc Off
+      php_flag short_open_tag On
+      php_flag register_globals Off
+      php_flag register_argc_argv On
+      php_flag track_vars On
+      # this setting is necessary for some locales
+      php_value mbstring.func_overload 0
+      php_value include_path .
+ &lt;/IfModule&gt;
+
+  DirectoryIndex index.php
+&lt;/Directory&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph data-line-201">
+<p>Damos permiso a nuestro host cacti y reiniciamos el servicio de apache. Luego creamos una archivo de bitacora en el directorio de Cacti y seteamos los permisos.</p>
+</div>
+<div class="listingblock data-line-203">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">sudo a2ensite cacti
+sudo systemctl restart apache2
+sudo touch /opt/cacti/log/cacti.log
+sudo chown -R www-data:www-data /opt/cacti/</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3 data-line-210">
+<h4 id="_setup_cacti">3.5.4. Setup Cacti</h4>
+<div class="paragraph data-line-211">
+<p>Ahora entramos a la confugarcion del Cacti por medio del navegador:</p>
+</div>
+<div class="listingblock data-line-213">
+<div class="content">
+<pre class="highlight"><code class="language-txt" data-lang="txt">&lt;IP de HOST o localhost&gt;/cacti</code></pre>
+</div>
+</div>
+<div class="paragraph data-line-217">
+<p>Aqui entramos con los valores de admin por defecto, en este caso, <strong>user:admin</strong> / <strong>password:admin</strong>.</p>
+</div>
+<div class="imageblock text-center data-line-220">
+<div class="content">
+<img src="images/cacti_install_1.png" alt="break">
+</div>
+</div>
+<div class="paragraph data-line-222">
+<p>Aqui cambiaremos nuestro password actual.</p>
+</div>
+<div class="imageblock text-center data-line-224">
+<div class="content">
+<img src="images/cacti_install_2.png" alt="break">
+</div>
+</div>
+<div class="paragraph data-line-226">
+<p>Marcamos el checkbox y damos click a <strong>Begin</strong></p>
+</div>
+<div class="imageblock text-center data-line-228">
+<div class="content">
+<img src="images/cacti_install_3.png" alt="break">
+</div>
+</div>
+<div class="paragraph data-line-230">
+<p>Si todo fue bien en la seccion de preparativos, nuestra pantalla se vera asi. Damos click en <strong>Next</strong>.</p>
+</div>
+<div class="imageblock text-center data-line-232">
+<div class="content">
+<img src="images/cacti_install_4.png" alt="break">
+</div>
+</div>
+<div class="paragraph data-line-234">
+<p>Seleccionamos del dropdown <strong>New Primary Server</strong>. Damos click en <strong>Next</strong>.</p>
+</div>
+<div class="imageblock text-center data-line-236">
+<div class="content">
+<img src="images/cacti_install_5.png" alt="break">
+</div>
+</div>
+<div class="paragraph data-line-238">
+<p>Revision de permisos en los directorios de Cacti.</p>
+</div>
+<div class="imageblock text-center data-line-240">
+<div class="content">
+<img src="images/cacti_install_6.png" alt="break">
+</div>
+</div>
+<div class="paragraph data-line-242">
+<p>Se muestran todos los paquetes y sus direcciones.</p>
+</div>
+<div class="imageblock text-center data-line-244">
+<div class="content">
+<img src="images/cacti_install_7.png" alt="break">
+</div>
+</div>
+<div class="paragraph data-line-246">
+<p>Configuracion del perfil</p>
+</div>
+<div class="imageblock text-center data-line-248">
+<div class="content">
+<img src="images/cacti_install_profile.png" alt="break">
+</div>
+</div>
+<div class="paragraph data-line-250">
+<p>Configuracion de plantillas.</p>
+</div>
+<div class="imageblock text-center data-line-252">
+<div class="content">
+<img src="images/cacti_install_8.png" alt="break">
+</div>
+</div>
+<div class="paragraph data-line-254">
+<p>Resumen de instalacion.</p>
+</div>
+<div class="imageblock text-center data-line-256">
+<div class="content">
+<img src="images/cacti_install_9.png" alt="break">
+</div>
+</div>
+<div class="paragraph data-line-258">
+<p>Confirmamos la instalacion.</p>
+</div>
+<div class="imageblock text-center data-line-260">
+<div class="content">
+<img src="images/cacti_install_10.png" alt="break">
+</div>
+</div>
+<div class="paragraph data-line-262">
+<p>Comienza la instalacion.</p>
+</div>
+<div class="imageblock text-center data-line-264">
+<div class="content">
+<img src="images/cacti_install_11.png" alt="break">
+</div>
+</div>
+<div class="paragraph data-line-266">
+<p>Instalacion completada.</p>
+</div>
+<div class="imageblock text-center data-line-268">
+<div class="content">
+<img src="images/cacti_install_12.png" alt="break">
+</div>
+</div>
+<div class="paragraph data-line-270">
+<p>&#8230;&#8203;Y si todo salio como esperaba, tenemos Cacti listo!</p>
+</div>
+<div class="imageblock text-center data-line-272">
+<div class="content">
+<img src="images/cacti_install_end.png" alt="break">
+</div>
+</div>
+<div class="paragraph data-line-29">
+<p>Unresolved directive in &lt;stdin&gt; - include::tracer.asc[]</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<h1 id="_bibliografia" class="sect0 data-line-31"><span class="icon"><i class="fa fa-book"></i></span> Bibliografia</h1>
+<div class="ulist data-line-33">
+<ul>
+<li class="data-line-33">
 <p><span class="icon"><i class="fa fa-book"></i></span> <a href="https://asciidoctor.org/docs/user-manual/">Asciidoctor User Manual</a></p>
 </li>
-<li class="data-line-32">
+<li class="data-line-34">
 <p><span class="icon"><i class="fa fa-book"></i></span> <a href="https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/">AsciiDoc Syntax Quick Reference</a></p>
 </li>
-<li class="data-line-33">
+<li class="data-line-35">
 <p><span class="icon"><i class="fa fa-book"></i></span> <a href="https://leanpub.com/awesomeasciidoctornotebook/read">Awesome Asciidoctor Notebook</a></p>
 </li>
-<li class="data-line-34">
+<li class="data-line-36">
 <p><span class="icon"><i class="fa fa-book"></i></span> <a href="https://jorge-aguilera.gitlab.io/tutoasciidoc/">Tutorial superbasico AsciiDoctor</a></p>
 </li>
-<li class="data-line-35">
+<li class="data-line-37">
 <p><span class="icon"><i class="fa fa-plug"></i></span> <a href="https://marketplace.visualstudio.com/items?itemName=asciidoctor.asciidoctor-vscode">AsciiDoc support for Visual Studio Code</a></p>
 </li>
 </ul>
 </div>
 <hr>
-<div class="paragraph text-center data-line-40">
+<div class="paragraph text-center data-line-42">
 <p><strong>HECHO</strong> CON <span class="icon"><i class="fa fa-heart fa-1x"></i></span> POR <strong>estudiantes de UNITEC</strong></p>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-09-18 17:15:19 -0600
+Last updated 2020-09-18 17:45:05 -0600
 </div>
 </div>
 </body>
