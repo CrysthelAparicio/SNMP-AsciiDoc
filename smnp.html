@@ -476,7 +476,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_funcionamiento">3.4. Funcionamiento</a>
 <ul class="sectlevel3">
 <li><a href="#_nagios_core_versión_web">3.4.1. NAGIOS CORE versión web</a></li>
-<li><a href="#_nagios_core_versión_windows">3.4.2. NAGIOS CORE versión Windows</a></li>
+<li><a href="#_nagios_core_versión_windows_virtualbox">3.4.2. NAGIOS CORE versión Windows (VirtualBox)</a></li>
 </ul>
 </li>
 </ul>
@@ -994,41 +994,216 @@ La arquitectura de NAGIOS core esta construida apartir de un servidor/agente(s).
 </div>
 </div>
 <div class="sect3 data-line-130">
-<h4 id="_nagios_core_versión_windows">3.4.2. NAGIOS CORE versión Windows</h4>
-<div class="olist arabic data-line-133">
+<h4 id="_nagios_core_versión_windows_virtualbox">3.4.2. NAGIOS CORE versión Windows (VirtualBox)</h4>
+<div class="imageblock text-center data-line-132">
+<div class="content">
+<img src="images/nagios_25.png" alt="nagios 25">
+</div>
+</div>
+<div class="olist arabic data-line-134">
 <ol class="arabic">
-<li class="data-line-133">
+<li class="data-line-134">
 <p>Acceder la página principal de NAGIOS:</p>
-<div class="paragraph data-line-135">
+<div class="paragraph data-line-136">
 <p><span class="red yellow-background big"><a href="https://www.nagios.org/projects/nagios-core/" class="bare">https://www.nagios.org/projects/nagios-core/</a></span></p>
 </div>
-<div class="imageblock text-center data-line-137">
+<div class="imageblock text-center data-line-138">
 <div class="content">
 <img src="images/nagios_2.png" alt="nagios 2">
 </div>
 </div>
-<div class="paragraph data-line-139">
+<div class="paragraph data-line-140">
 <p>Hacer clic en "Donwload for Free" y elejir Nagios XI para descarga. Elejir versión Windows.</p>
 </div>
 </li>
-<li class="data-line-141">
+<li class="data-line-142">
 <p>Crear cuenta para bajar Nagios.</p>
 </li>
-<li class="data-line-142">
+<li class="data-line-143">
 <p>Hacer clic en "Download now" .ova</p>
-<div class="imageblock text-center data-line-144">
+<div class="imageblock text-center data-line-145">
 <div class="content">
 <img src="images/nagios_20.png" alt="nagios 20">
 </div>
 </div>
-<div class="paragraph data-line-146">
+<div class="paragraph data-line-147">
 <p>Esperar la descarga&#8230;&#8203;</p>
 </div>
-<div class="paragraph data-line-148">
-<p>4.</p>
+</li>
+<li class="data-line-149">
+<p>Irse a Oracle VirtualBox y seleccionar "Importar servicio virtualizado"</p>
+<div class="imageblock text-center data-line-151">
+<div class="content">
+<img src="images/nagios_21.png" alt="nagios 21">
+</div>
+</div>
+</li>
+<li class="data-line-153">
+<p>Seleccionar archivo .ova y seleccionar "Next"</p>
+<div class="imageblock text-center data-line-155">
+<div class="content">
+<img src="images/nagios_22.png" alt="nagios 22">
+</div>
+</div>
+</li>
+<li class="data-line-157">
+<p>Seleccionar "Next"</p>
+<div class="imageblock text-center data-line-159">
+<div class="content">
+<img src="images/nagios_23.png" alt="nagios 23">
+</div>
+</div>
+</li>
+<li class="data-line-161">
+<p>Seleccionar "Importar"</p>
+<div class="imageblock text-center data-line-163">
+<div class="content">
+<img src="images/nagios_23.png" alt="nagios 23">
+</div>
+</div>
+</li>
+<li class="data-line-165">
+<p>Correr máquina virtual</p>
+<div class="imageblock text-center data-line-167">
+<div class="content">
+<img src="images/nagios_24.png" alt="nagios 24">
+</div>
+</div>
+</li>
+<li class="data-line-169">
+<p>Ingresar a la consola:</p>
+<div class="ulist data-line-171">
+<ul>
+<li class="data-line-171">
+<p>localhost login: <span class="red yellow-background big">root</span></p>
+</li>
+<li class="data-line-172">
+<p>password: <span class="red yellow-background big">nagiosxi</span></p>
+<div class="imageblock text-center data-line-174">
+<div class="content">
+<img src="images/nagios_26.png" alt="nagios 26">
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li class="data-line-176">
+<p>Ingresar IP proporcionada por NAGIOS XI en un navegador. En este caso la IP del servidor de Nagios es:</p>
+<div class="paragraph data-line-178">
+<p><span class="red yellow-background big"><a href="http://192.168.0.12" class="bare">http://192.168.0.12</a></span></p>
+</div>
+<div class="imageblock text-center data-line-180">
+<div class="content">
+<img src="images/nagios_27.png" alt="nagios 27">
+</div>
+</div>
+<div class="paragraph data-line-182">
+<p>Hacer clic en "Access Nagios XI"</p>
+</div>
+</li>
+<li class="data-line-183">
+<p>Hacer clic en "Next"</p>
+<div class="imageblock text-center data-line-185">
+<div class="content">
+<img src="images/nagios_28.png" alt="nagios 28">
+</div>
+</div>
+</li>
+<li class="data-line-187">
+<p>Hacer clic en "Finish install"</p>
+<div class="imageblock text-center data-line-189">
+<div class="content">
+<img src="images/nagios_29.png" alt="nagios 29">
+</div>
+</div>
+<div class="paragraph data-line-191">
+<p>Nota: tener la contraseña guardada en algún lado.</p>
+</div>
+</li>
+<li class="data-line-192">
+<p>Realizar log in a Nagios XI</p>
+<div class="imageblock text-center data-line-194">
+<div class="content">
+<img src="images/nagios_30.png" alt="nagios 30">
+</div>
+</div>
+</li>
+<li class="data-line-196">
+<p>Instalación completada</p>
+<div class="imageblock text-center data-line-198">
+<div class="content">
+<img src="images/nagios_31.png" alt="nagios 31">
+</div>
 </div>
 </li>
 </ol>
+</div>
+<div class="sect4 data-line-200">
+<h5 id="_pruebas_en_nagios_versión_en_windows_virtualbox">3.4.2.1. Pruebas en NAGIOS versión en Windows (VirtualBox)</h5>
+<div class="olist arabic data-line-201">
+<ol class="arabic">
+<li class="data-line-201">
+<p>Seleccionar "Configuration Wizards"</p>
+<div class="imageblock text-center data-line-203">
+<div class="content">
+<img src="images/nagios_32.png" alt="nagios 32">
+</div>
+</div>
+</li>
+<li class="data-line-205">
+<p>Buscar configuración "Website URL"</p>
+<div class="imageblock text-center data-line-207">
+<div class="content">
+<img src="images/nagios_33.png" alt="nagios 33">
+</div>
+</div>
+</li>
+<li class="data-line-209">
+<p>Ingresar una dirección web. En este caso se utilizará  <a href="https://portal.unitec.edu" class="bare">https://portal.unitec.edu</a></p>
+<div class="imageblock text-center data-line-211">
+<div class="content">
+<img src="images/nagios_34.png" alt="nagios 34">
+</div>
+</div>
+</li>
+<li class="data-line-213">
+<p>Ingresar información</p>
+<div class="imageblock text-center data-line-215">
+<div class="content">
+<img src="images/nagios_35.png" alt="nagios 35">
+</div>
+</div>
+<div class="paragraph data-line-217">
+<p>Hacer clic en Next.</p>
+</div>
+</li>
+<li class="data-line-218">
+<p>Hacer clic en Finish</p>
+<div class="imageblock text-center data-line-220">
+<div class="content">
+<img src="images/nagios_36.png" alt="nagios 36">
+</div>
+</div>
+<div class="paragraph data-line-222">
+<p>Configuración completada. Revisar el status del host.</p>
+</div>
+<div class="imageblock text-center data-line-224">
+<div class="content">
+<img src="images/nagios_37.png" alt="nagios 37">
+</div>
+</div>
+<div class="paragraph data-line-226">
+<p>Status:</p>
+</div>
+<div class="imageblock text-center data-line-228">
+<div class="content">
+<img src="images/nagios_38.png" alt="nagios 38">
+</div>
+</div>
+</li>
+</ol>
+</div>
 </div>
 </div>
 </div>
@@ -1061,7 +1236,7 @@ La arquitectura de NAGIOS core esta construida apartir de un servidor/agente(s).
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-09-18 15:24:43 -0600
+Last updated 2020-09-18 17:15:19 -0600
 </div>
 </div>
 </body>
