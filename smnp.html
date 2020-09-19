@@ -495,6 +495,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_configuración_de_protocolo_snmp">Configuración de Protocolo SNMP</a></li>
 </ul>
 </li>
+<li><a href="#_ejemplo_de_uso_cacti_en_gns3">3.6. <strong>Ejemplo de Uso: Cacti en GNS3 </strong></a>
+<ul class="sectlevel3">
+<li><a href="#_preparativos">3.6.1. <strong>Preparativos</strong></a></li>
+<li><a href="#_cacti_2">3.6.2. <strong>Cacti</strong></a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a href="#_bibliografia"><span class="icon"><i class="fa fa-book"></i></span> Bibliografia</a></li>
@@ -2030,36 +2036,200 @@ En el paso anterior se configuró el Router R1 con SNMP. Podemos probarlo desde 
 </div>
 </div>
 </div>
+<div class="sect2 data-line-3">
+<h3 id="_ejemplo_de_uso_cacti_en_gns3">3.6. <strong>Ejemplo de Uso: Cacti en GNS3 </strong></h3>
+<div class="paragraph data-line-5">
+<p>En esta ocasion, el sistema operativo a utilizar es Lubuntu. Se opto por ella ya que consume muy pocos recursos, y luego esta se integrara como componente a GNS3 (como maquina virtual). Cabe mencionar que el software para maquinas virtuales que utilizaremos es VMWare Workstation Pro.</p>
+</div>
+<div class="sect3 data-line-7">
+<h4 id="_preparativos">3.6.1. <strong>Preparativos</strong></h4>
+<div class="paragraph data-line-8">
+<p>Se requiere que el usuario instale una maquina virtual con un sistema operativo ligero. En este caso, nuestro OS sera Lubuntu, que es una version ligera de Ubuntu.</p>
+</div>
+<div class="imageblock text-center data-line-10">
+<div class="content">
+<img src="images/gns3_cacti_Lubuntu.png" alt="gns3 cacti Lubuntu">
 </div>
 </div>
-<h1 id="_bibliografia" class="sect0 data-line-31"><span class="icon"><i class="fa fa-book"></i></span> Bibliografia</h1>
-<div class="ulist data-line-33">
+<div class="paragraph data-line-13">
+<p>Luego debemos importar la VM a GNS3. Entramos al tab de edit, y luego click en preferencias.Luego selecionamos la opcion resaltada en nuestra imagen, y damos click en new.</p>
+</div>
+<div class="imageblock text-center data-line-15">
+<div class="content">
+<img src="images/gns3_cacti_importarVM.png" alt="gns3 cacti importarVM">
+</div>
+</div>
+<div class="paragraph data-line-17">
+<p>Luego se creamos un proyecto en GNS3, con la topologia mostrada:</p>
+</div>
+<div class="imageblock text-center data-line-19">
+<div class="content">
+<img src="images/gns3_cacti_escuelita.png" alt="gns3 cacti escuelita">
+</div>
+</div>
+<div class="paragraph data-line-21">
+<p>Luego configuramos los siguientes dispositivos</p>
+</div>
+<div class="paragraph data-line-23">
+<p>Router R1:</p>
+</div>
+<div class="listingblock data-line-25">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">ena
+conf t
+int fa0/0
+ip addr 192.168.0.1 255.255.255.252
+no shutdown
+router ospf 20
+network 192.168.0.0 255.255.255.252 area 0
+network 192.168.1.0 255.255.255.0 area 0
+network 192.168.2.0 255.255.255.0 area 0
+network 192.168.3.0 255.255.255.0 area 0
+end
+wr</code></pre>
+</div>
+</div>
+<div class="paragraph data-line-40">
+<p>Switch IOU:</p>
+</div>
+<div class="listingblock data-line-43">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">ena
+conf t
+vlan 10
+name SYSADMIN
+vlan 20
+name MAESTROS
+vlan 30
+name ALUMNOS
+vlan 50
+name ROUTER
+
+int e0/0
+no switchport
+ip address 192.168.0.2 255.255.255.252
+no shut
+
+int vlan 10
+ip add 192.168.1.1 255.255.255.0
+no shut
+
+int vlan 20
+ip add 192.168.2.1 255.255.255.0
+no shut
+
+int vlan 30
+ip add 192.168.3.1 255.255.255.0
+no shut
+
+int e0/1
+switchport access vlan 10
+int e0/2
+switchport access vlan 20
+int e0/3
+switchport access vlan 30
+
+exit
+
+router ospf 20
+network 192.168.0.0 255.255.255.252 area 0
+network 192.168.1.0 255.255.255.0 area 0
+network 192.168.2.0 255.255.255.0 area 0
+network 192.168.3.0 255.255.255.0 area 0
+end
+
+conf t
+snmp-server community cisco RW cisco
+snmp-server ifindex persist
+snmp-server host 192.168.1.10 version 2c cisco
+end
+
+wr</code></pre>
+</div>
+</div>
+<div class="paragraph data-line-97">
+<p>Luego configuramos las IPs de las pcs en su configuracion de startup:</p>
+</div>
+<div class="imageblock text-center data-line-99">
+<div class="content">
+<img src="images/gns3_cacti_confPC.png" alt="gns3 cacti confPC">
+</div>
+</div>
+<div class="paragraph data-line-101">
+<p>Para configurar la VM debemos entrar a menu&#8594; preferencias &#8594; configuracion de red. Y cambiamos los valores de la interfaz.</p>
+</div>
+<div class="imageblock text-center data-line-104">
+<div class="content">
+<img src="images/gns3_cacti_confPCVM.png" alt="gns3 cacti confPCVM">
+</div>
+</div>
+<div class="paragraph data-line-106">
+<p>Por ultimo nos aseguramos de que todo este corriendo como deberia.</p>
+</div>
+<div class="imageblock text-center data-line-109">
+<div class="content">
+<img src="images/gns3_cacti_checkup.png" alt="gns3 cacti checkup">
+</div>
+</div>
+</div>
+<div class="sect3 data-line-112">
+<h4 id="_cacti_2">3.6.2. <strong>Cacti</strong></h4>
+<div class="paragraph data-line-114">
+<p>Abrimos nuestra herramienta en nuestra direccion IP.</p>
+</div>
+<div class="imageblock text-center data-line-117">
+<div class="content">
+<img src="images/gns3_cacti_up.png" alt="gns3 cacti up">
+</div>
+</div>
+<div class="paragraph data-line-119">
+<p>Luego agregamos un dispostivo.En este caso decidi agregar el switch IOU. Se puede ver la informacion del dispositivo al agregarlo.</p>
+</div>
+<div class="imageblock text-center data-line-121">
+<div class="content">
+<img src="images/gns3_cacti_addDeviceSuccess.png" alt="gns3 cacti addDeviceSuccess">
+</div>
+</div>
+<div class="paragraph data-line-123">
+<p>Luego vamos a nuestra lista de dispositivos,y vemos que se ha agregado exitosamente.</p>
+</div>
+<div class="imageblock text-center data-line-125">
+<div class="content">
+<img src="images/gns3_cacti_deviceList.png" alt="gns3 cacti deviceList">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<h1 id="_bibliografia" class="sect0 data-line-32"><span class="icon"><i class="fa fa-book"></i></span> Bibliografia</h1>
+<div class="ulist data-line-34">
 <ul>
-<li class="data-line-33">
+<li class="data-line-34">
 <p><span class="icon"><i class="fa fa-book"></i></span> <a href="https://asciidoctor.org/docs/user-manual/">Asciidoctor User Manual</a></p>
 </li>
-<li class="data-line-34">
+<li class="data-line-35">
 <p><span class="icon"><i class="fa fa-book"></i></span> <a href="https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/">AsciiDoc Syntax Quick Reference</a></p>
 </li>
-<li class="data-line-35">
+<li class="data-line-36">
 <p><span class="icon"><i class="fa fa-book"></i></span> <a href="https://leanpub.com/awesomeasciidoctornotebook/read">Awesome Asciidoctor Notebook</a></p>
 </li>
-<li class="data-line-36">
+<li class="data-line-37">
 <p><span class="icon"><i class="fa fa-book"></i></span> <a href="https://jorge-aguilera.gitlab.io/tutoasciidoc/">Tutorial superbasico AsciiDoctor</a></p>
 </li>
-<li class="data-line-37">
+<li class="data-line-38">
 <p><span class="icon"><i class="fa fa-plug"></i></span> <a href="https://marketplace.visualstudio.com/items?itemName=asciidoctor.asciidoctor-vscode">AsciiDoc support for Visual Studio Code</a></p>
 </li>
 </ul>
 </div>
 <hr>
-<div class="paragraph text-center data-line-42">
+<div class="paragraph text-center data-line-43">
 <p><strong>HECHO</strong> CON <span class="icon"><i class="fa fa-heart fa-1x"></i></span> POR <strong>estudiantes de UNITEC</strong></p>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-09-18 19:33:00 -0600
+Last updated 2020-09-18 21:32:14 -0600
 </div>
 </div>
 </body>
